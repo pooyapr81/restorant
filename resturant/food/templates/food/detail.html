@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <P class="card">
+        {{food.name}} <br>{{food.pup_date|timesince}}, rate:{{food.rate}}
+    </P>
+    {% if food.photo %}
+        <img src="{{ food.photo.url }}">
+    {% endif %}
+    <p class="card">
+        {{food.description}}<br>
+        {{food.price}}<br>
+        {{food.time}}m
+    </p>
+{% endblock %}
